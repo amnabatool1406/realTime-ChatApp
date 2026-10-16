@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealTime-ChatApp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--authentication screen-->
+        <div class="auth-container" id="auth-container">
+            <div class="auth-form">
+                <h2 id="auth-title">LogIn To ChatApp</h2>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                        <label for="password">Password</label>
+                    <input type="text" id="password" placeholder="Enter your password">
+                </div>
+                <div class="form-group" id="username-group" style="display: none;">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Choose a username">
+                </div>
+                <div class="btn" id="auth-btn">Login</div>
+                <div class="auth-switch">
+                    <span id="auth-switch-text"> Don't have an account?</span>
+                    <a id="auth-switch-link">Register</a>
+                </div>
+            </div>
+        </div>
+        <!--chat screen-->
+        <div class="chat-container" id="chat-container">
+            <!--sidebar-->
+            <div class="sidebar">
+                <div class="user-profile">
+                    <div class="user-avatar" id="user-avatar">u</div>
+                    <div class="user-info">
+                        <h3 id="display-username">User</h3>
+                        <span class="user-status">Online</span>
+                    </div>
+                </div>
+                <div class="online-user">
+                    <h4>Online Users</h4>
+                    <ul class="user-list" id="user-list">
+                        <li><span class="status-indicator"></span><span class="username">YOU</span></li>
+                        <li><span class="status-indicator"></span><span class="username">Sara Ali</span></li>
+                        <li><span class="status-indicator"></span><span class="username">Ahmed Khan</span></li>
+                        <li><span class="status-indicator"></span><span class="username">Umer Hayat</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--chat area-->
+            <div class="chat-area">
+                <div class="chat-header">
+                    <h3 class="current-chat">General Chat</h3>
+                </div>
+                <div class="messages" id="messages">
+                    <!--massages will be added here dynamically-->
+                </div>
+                <div class="input-area">
+                    <input type="text" class="message-input" id="message-input" placeholder="Type a message......">
+                    <button class="send-btn" id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
